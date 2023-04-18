@@ -1,0 +1,110 @@
+@media (max-width: 950px) {
+  body {
+    margin-top: 15px;
+  }
+
+  .cabecalho {
+    gap: 40px;
+  }
+
+  .menu a,
+  .btn {
+    padding: 0.7rem 1.5rem;
+  }
+
+  main {
+    max-width: 80%;
+  }
+
+  .intro {
+    display: grid;
+    grid-column: 1 / -1;
+    text-align: left;
+    align-content: center;
+    place-items: start;
+  }
+
+  .bikcraft {
+    display: grid;
+    grid-column: 1 / -1;
+  }
+
+  .intro::before {
+    top: 99.5%;
+    left: 45%;
+  }
+
+  .vantagens {
+    display: grid;
+    grid-column: 1 / -1;
+    text-align: center;
+  }
+
+  .caixa {
+    display: grid;
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    gap: 40px;
+  }
+
+  .menu {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 15px;
+  }
+
+  .menu a {
+    display: block;
+
+  }
+
+  .vantagens {
+    font-size: 3rem;
+  }
+
+  .intro::before {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  .vantagens {
+    font-size: 2.1rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .vantagens {
+    font-size: 1.5rem;
+  }
+
+  .menu a,
+  .btn {
+    padding: 0.5rem 0.8rem;
+  }
+
+  .bikes {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  .caixa {
+    padding: 20px;
+  }
+
+  .itens-vantagens {
+    padding: 10px;
+    gap: 6px 12px;
+  }
+}
