@@ -1,11 +1,35 @@
+:root {
+  --background: #f7f7f7;
+  --background2: #fff;
+  --primary-color: #e21;
+  --primary-color-dark: #900;
+  --texto: #000;
+  --vantagens: rgba(0, 0, 0, 0.2);
+  --onda: url(../img/onda-clara.svg)
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #111;
+    --background2: #000;
+    --texto: #fff;
+    --primary-color: #e21;
+    --primary-color-dark: #900;
+    --vantagens: rgba(255, 255, 255, 0.2);
+    --onda: url(../img/onda-escura.svg)
+  }
+}
+
+
 body {
   margin: 0px;
   display: grid;
   font-family: Arial, Helvetica, sans-serif;
   gap: 60px;
   margin-top: 60px;
-  background-color: #f7f7f7;
+  background-color: var(--background);
   justify-items: center;
+  color: var(--texto);
 }
 ul {
   margin: 0;
@@ -44,7 +68,7 @@ img {
   gap: 60px;
 }
 
-.logo {
+svg {
   place-self: center;
 }
 
@@ -61,14 +85,14 @@ img {
 
 .menu a {
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: var(--background2);
   border-radius: 0.3rem;
-  color: black;
+  color: var(--texto);
   border: 2px solid transparent;
 }
 
 .menu a:hover {
-  border-color: #e21;
+  border-color: var(--primary-color);
 }
 
 .content {
@@ -79,7 +103,7 @@ img {
 
 .intro {
   display: grid;
-  background-color: #fff;
+  background-color: var(--background2);
   text-align: right;
   align-content: center;
   place-items: end;
@@ -89,14 +113,14 @@ img {
 }
 
 .btn {
-  background-color: #e21;
+  background-color: var(--primary-color);
   color: #fff;
   padding: 1rem 2rem;
   border-radius: 4px;
 }
 
 .btn:hover {
-  background-color: #900;
+  background-color: var(--primary-color-dark);
 }
 
 .bikes {
@@ -107,7 +131,7 @@ img {
   content: "";
   width: 60px;
   height: 4px;
-  background-color: #e21;
+  background-color: var(--primary-color);
   position: absolute;
   top: 30px;
   right: -30px;
@@ -118,13 +142,13 @@ img {
   align-self: center;
   padding: 40px;
   font-size: 4rem;
-  color: rgba(0, 0, 0, 0.2);
-  background-image: url(../img/onda.svg);
+  color: var(--vantagens);
+  background-image: var(--onda);
   /* object-fit: cover; */
 }
 
 .caixa {
-  background-color: #fff;
+  background-color: var(--background2);
   padding: 40px;
 }
 
@@ -141,15 +165,15 @@ img {
 
 .itens-vantagens:hover {
   border-left: 4px solid transparent;
-  border-color: #e21;
+  border-color: var(--primary-color);
 }
 
 .itens-vantagens:nth-child(odd) {
-  background-color: #f7f7f7;
+  background-color: var(--background);
 }
 
 .rodape {
-  background-color: #fff;
+  background-color: var(--background2);
   width: 100%;
   text-align: center;
   padding: 40px 0;
